@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ethan Dasi, financial risk and data, Bordeaux</title>
+<meta name="description" content="Master's student in Financial and Economic Risk Engineering in Bordeaux. Available from March 2027 for a 6-month internship in risk management or data analysis.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ethan Dasi">
+<meta property="og:title" content="Ethan Dasi, financial risk and data, Bordeaux">
+<meta property="og:description" content="Available from March 2027 for a 6-month internship in risk management or data analysis. Projects, experience and contact.">
+<meta property="og:url" content="https://dasiethan.github.io/">
+<meta property="og:image" content="https://dasiethan.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ethan Dasi, financial risk and data, available from March 2027">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://dasiethan.github.io/og-image.png">
+<link rel="canonical" href="https://dasiethan.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%237A1F35'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' font-weight='700' text-anchor='middle' fill='%23fff'%3ED%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<script>
+  /* Anglais par défaut ; on reprend le choix précédent du visiteur s'il existe. */
+  try {
+    var saved = localStorage.getItem("lang");
+    if (saved === "fr" || saved === "en") document.documentElement.lang = saved;
+  } catch (e) {}
+</script>
+<style>
+  :root {
+    --paper: #F2F4F7;
+    --ink: #111B2E;
+    --muted: #526074;
+    --rule: #D3D9E2;
+    --accent: #7A1F35;
+    --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+    --text: "Figtree", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #0F1626;
+      --ink: #E8ECF3;
+      --muted: #9AA6BA;
+      --rule: #27324A;
+      --accent: #E8909F;
+    }
+  }
+
+  /* Bascule de langue : chaque texte existe en deux versions */
+  html[lang="en"] [lang="fr"] { display: none; }
+  html[lang="fr"] [lang="en"] { display: none; }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--text);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em; text-decoration-color: var(--rule); }
+  a:hover { color: var(--accent); text-decoration-color: currentColor; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+  h1, h2, h3 { font-family: var(--display); margin: 0; font-weight: 700; letter-spacing: -0.02em; }
+  p { margin: 0; }
+  ul { list-style: none; margin: 0; padding: 0; }
+
+  .page {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3rem;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: clamp(1.5rem, 5vw, 4rem);
+  }
+  @media (min-width: 920px) {
+    .page { grid-template-columns: minmax(260px, 330px) minmax(0, 1fr); gap: clamp(3rem, 7vw, 6.5rem); }
+    aside { position: sticky; top: 4rem; align-self: start; }
+  }
+
+  /* Sélecteur de langue */
+  .lang { display: flex; gap: 1.1rem; margin-bottom: 2.2rem; }
+  .lang button {
+    font: inherit;
+    font-size: 0.95rem;
+    color: var(--muted);
+    background: none;
+    border: 0;
+    padding: 0.15rem 0;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+  }
+  .lang button:hover { color: var(--ink); }
+  .lang button[aria-pressed="true"] { color: var(--ink); font-weight: 600; border-bottom-color: var(--accent); }
+
+  /* Colonne gauche */
+  h1 {
+    font-size: clamp(2.8rem, 6vw, 3.9rem);
+    line-height: 1;
+    letter-spacing: -0.035em;
+  }
+  .role { margin-top: 1.1rem; color: var(--muted); max-width: 30ch; }
+  .avail {
+    margin-top: 2rem;
+    padding-left: 1.1rem;
+    border-left: 3px solid var(--accent);
+  }
+  .avail strong {
+    display: block;
+    font-family: var(--display);
+    font-size: 1.35rem;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+  }
+  .avail .note { display: block; margin-top: 0.4rem; color: var(--muted); font-size: 0.97rem; max-width: 32ch; }
+  .contact { margin-top: 2rem; display: grid; gap: 0.35rem; }
+  .contact a { width: fit-content; }
+  .contact .cv { margin-top: 0.6rem; font-weight: 600; text-decoration-color: var(--accent); }
+
+  /* Colonne droite */
+  main section { padding-top: 1.4rem; border-top: 1px solid var(--rule); }
+  main section + section { margin-top: 3.5rem; }
+  main section:first-child { border-top: 0; padding-top: 0; }
+  h2 { font-size: 1.5rem; margin-bottom: 1.6rem; }
+  h3 { font-size: 1.12rem; letter-spacing: -0.01em; }
+
+  .lead { font-size: 1.22rem; line-height: 1.55; max-width: 60ch; }
+
+  .entry { display: grid; gap: 0.3rem 2rem; padding: 1.1rem 0; }
+  .entry + .entry { border-top: 1px solid var(--rule); }
+  .entry:first-of-type { padding-top: 0; }
+  .when { color: var(--muted); font-size: 0.95rem; font-variant-numeric: tabular-nums; }
+  .where { color: var(--muted); font-size: 0.97rem; }
+  .entry ul { margin-top: 0.7rem; display: grid; gap: 0.4rem; max-width: 62ch; }
+  .entry li { padding-left: 1.1rem; position: relative; }
+  .entry li::before { content: ""; position: absolute; left: 0; top: 0.72em; width: 0.4rem; height: 1px; background: var(--muted); }
+  @media (min-width: 640px) {
+    .entry { grid-template-columns: 9.5rem minmax(0, 1fr); }
+    .entry .when { grid-row: 1 / span 3; padding-top: 0.2rem; }
+  }
+
+  /* Projets : lecture en relevé, le chiffre clé à droite */
+  .group + .group { margin-top: 2.6rem; }
+  .group > h3 { color: var(--muted); font-weight: 600; font-size: 0.98rem; letter-spacing: 0; margin-bottom: 0.4rem; }
+  .row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.9rem 2rem;
+    padding: 1.4rem 0;
+    border-top: 1px solid var(--rule);
+  }
+  .row:last-child { border-bottom: 1px solid var(--rule); }
+  .row p.what { margin-top: 0.4rem; max-width: 58ch; }
+  .row p.stack { margin-top: 0.5rem; color: var(--muted); font-size: 0.92rem; }
+  .row .tag { color: var(--accent); font-size: 0.9rem; font-weight: 500; }
+  .figure { display: flex; flex-direction: column; gap: 0.15rem; }
+  .figure strong {
+    font-family: var(--display);
+    font-size: 2rem;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .figure .cap { color: var(--muted); font-size: 0.88rem; line-height: 1.35; }
+  @media (min-width: 640px) {
+    .row { grid-template-columns: minmax(0, 1fr) 10.5rem; }
+    .figure { text-align: right; align-items: flex-end; }
+  }
+  .row.compact { grid-template-columns: minmax(0, 1fr); padding: 1.05rem 0; gap: 0.2rem; }
+  .row.compact h3 { font-size: 1.02rem; }
+  .row.compact p.what { margin-top: 0.2rem; }
+  .row.compact p.stack { margin-top: 0.25rem; }
+  .more { margin-top: 1.4rem; }
+
+  dl.skills { margin: 0; display: grid; gap: 1.1rem; }
+  dl.skills div { display: grid; gap: 0.2rem 2rem; }
+  dl.skills dt { font-weight: 600; }
+  dl.skills dd { margin: 0; color: var(--muted); max-width: 60ch; }
+  @media (min-width: 640px) { dl.skills div { grid-template-columns: 9.5rem minmax(0, 1fr); } }
+
+  .end { margin-top: 4rem; padding-top: 1.4rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.95rem; }
+  .end a { color: var(--ink); }
+  .end a:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <aside>
+    <div class="lang" role="group" aria-label="Language / Langue">
+      <button type="button" data-set="en" aria-pressed="true">English</button>
+      <button type="button" data-set="fr" aria-pressed="false">Français</button>
+    </div>
+
+    <h1>Ethan<br>Dasi</h1>
+    <p class="role">
+      <span lang="en">Master's (M2) in Financial and Economic Risk Engineering, University of Bordeaux.</span>
+      <span lang="fr">Master 2 Ingénierie des Risques Économiques et Financiers, Université de Bordeaux.</span>
+    </p>
+
+    <p class="avail">
+      <strong><span lang="en">Available from March 2027</span><span lang="fr">Disponible à partir de mars 2027</span></strong>
+      <span class="note">
+        <span lang="en">6-month internship in Bordeaux in risk management, data analysis, banking, insurance or audit.</span>
+        <span lang="fr">Stage de 6 mois à Bordeaux en gestion des risques, analyse de données, banque, assurance ou audit.</span>
+      </span>
+    </p>
+
+    <nav class="contact" aria-label="Contact">
+      <a href="mailto:ethan.dasi.pro@gmail.com">ethan.dasi.pro@gmail.com</a>
+      <a href="https://www.linkedin.com/in/ethan-dasi-6102302ba/">LinkedIn</a>
+      <a href="https://github.com/dasiethan">GitHub</a>
+    </nav>
+  </aside>
+
+  <main>
+    <section id="profil">
+      <h2><span lang="en">Profile</span><span lang="fr">Profil</span></h2>
+      <p class="lead">
+        <span lang="en">I work at the intersection of finance and data. This summer, I built ESG scores from investment fund data at Bordeaux School of Economics. On the side, I build credit, market and insurance risk models on public data, with reproducible code published on GitHub.</span>
+        <span lang="fr">Je travaille à la jonction de la finance et de la data. Cet été, j'ai construit des scores ESG à partir de données de fonds d'investissement à Bordeaux School of Economics. À côté, je développe des modèles de risque de crédit, de marché et d'assurance sur données publiques, avec un code reproductible publié sur GitHub.</span>
+      </p>
+    </section>
+
+    <section id="experience">
+      <h2><span lang="en">Experience</span><span lang="fr">Expérience</span></h2>
+
+      <article class="entry">
+        <p class="when"><span lang="en">May to July 2026</span><span lang="fr">Mai à juillet 2026</span></p>
+        <h3><span lang="en">Research intern, green finance and data science</span><span lang="fr">Stagiaire de recherche, finance verte et data science</span></h3>
+        <p class="where"><span lang="en">Bordeaux School of Economics, University of Bordeaux</span><span lang="fr">Bordeaux School of Economics, Université de Bordeaux</span></p>
+        <ul>
+          <li><span lang="en">Cleaning and cross-referencing multi-source financial databases (Refinitiv, SEC N-PORT)</span><span lang="fr">Nettoyage et croisement de bases de données financières multi-sources (Refinitiv, SEC N-PORT)</span></li>
+          <li><span lang="en">Building ESG scores and green finance ratios in line with the SFDR and EU Taxonomy frameworks</span><span lang="fr">Construction de scores ESG et de ratios de finance verte selon les référentiels SFDR et la taxonomie européenne</span></li>
+          <li><span lang="en">Analyzing ESG fund performance and behavior (Fama-French models, Markov chains)</span><span lang="fr">Analyse de la performance et du comportement des fonds ESG (modèles Fama-French, chaînes de Markov)</span></li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <p class="when"><span lang="en">Since October 2023</span><span lang="fr">Depuis octobre 2023</span></p>
+        <h3><span lang="en">Private mathematics tutor</span><span lang="fr">Professeur particulier de mathématiques</span></h3>
+        <p class="where"><span lang="en">Self-employed</span><span lang="fr">Activité indépendante</span></p>
+        <ul>
+          <li><span lang="en">Personalized tutoring for middle and high school students</span><span lang="fr">Accompagnement personnalisé d'élèves du collège et du lycée</span></li>
+          <li><span lang="en">Method adapted to each student, with a significant improvement in school results</span><span lang="fr">Méthode adaptée à chaque élève, avec une amélioration significative des résultats scolaires</span></li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="projets">
+      <h2><span lang="en">Projects</span><span lang="fr">Projets</span></h2>
+
+      <div class="group">
+        <h3><span lang="en">Financial risk, on public data</span><span lang="fr">Risques financiers, sur données publiques</span></h3>
+        <ul>
+          <li class="row">
+            <div>
+              <h3><a href="https://github.com/dasiethan/Financial-Risk-Projects/tree/main/01-credit-risk-scoring"><span lang="en">Credit risk scoring: scorecard vs gradient boosting</span><span lang="fr">Scoring de risque de crédit : scorecard contre gradient boosting</span></a></h3>
+              <p class="what"><span lang="en">Probability-of-default model on 30,000 credit card clients. A points-based scorecard (monotonic WoE binning, logistic regression) is compared with LightGBM on discrimination, calibration and PSI stability.</span><span lang="fr">Modèle de probabilité de défaut sur 30 000 clients de cartes de crédit. Une scorecard à points (discrétisation WoE monotone, régression logistique) est comparée à LightGBM sur la discrimination, la calibration et la stabilité (PSI).</span></p>
+              <p class="stack">Python, statsmodels, scikit-learn, LightGBM</p>
+            </div>
+            <p class="figure"><strong>0.57</strong><span class="cap"><span lang="en">test Gini of LightGBM, vs 0.53 for the scorecard</span><span lang="fr">de Gini en test pour LightGBM, contre 0,53 pour la scorecard</span></span></p>
+          </li>
+          <li class="row">
+            <div>
+              <h3><a href="https://github.com/dasiethan/Financial-Risk-Projects/tree/main/02-market-risk-var-es"><span lang="en">Market risk: VaR, Expected Shortfall and backtesting</span><span lang="fr">Risque de marché : VaR, Expected Shortfall et backtesting</span></a></h3>
+              <p class="what"><span lang="en">One-day VaR 99% and ES 97.5% of a French equity portfolio with six methods, including GARCH and filtered historical simulation, backtested daily over 14 years with the Kupiec and Christoffersen tests and the Basel traffic light.</span><span lang="fr">VaR 99 % et ES 97,5 % à un jour d'un portefeuille d'actions françaises avec six méthodes, dont GARCH et la simulation historique filtrée, backtestées chaque jour sur 14 ans avec les tests de Kupiec et Christoffersen et les feux tricolores de Bâle.</span></p>
+              <p class="stack">Python, arch, SciPy, yfinance</p>
+            </div>
+            <p class="figure"><strong><span lang="en">70 vs 36</span><span lang="fr">70 contre 36</span></strong><span class="cap"><span lang="en">exceptions of the Normal VaR vs expected: fat tails matter</span><span lang="fr">exceptions de la VaR normale contre attendu : les queues épaisses comptent</span></span></p>
+          </li>
+          <li class="row">
+            <div>
+              <h3><a href="https://github.com/dasiethan/Financial-Risk-Projects/tree/main/03-insurance-pricing-glm"><span lang="en">Motor insurance pricing: GLM vs boosting</span><span lang="fr">Tarification assurance auto : GLM contre boosting</span></a></h3>
+              <p class="what"><span lang="en">Pure premium for 678,000 French motor liability policies: Poisson frequency and Gamma severity GLMs with relativities, factor selection and a large-claim loading, compared with LightGBM.</span><span lang="fr">Prime pure pour 678 000 contrats de responsabilité civile auto français : GLM Poisson pour la fréquence et Gamma pour le coût, avec relativités, sélection des facteurs et chargement des sinistres graves, comparés à LightGBM.</span></p>
+              <p class="stack">Python, statsmodels, LightGBM</p>
+            </div>
+            <p class="figure"><strong>0.347</strong><span class="cap"><span lang="en">Lorenz Gini of the LightGBM premium, vs 0.291 for the GLM</span><span lang="fr">de Gini de Lorenz pour la prime LightGBM, contre 0,291 pour le GLM</span></span></p>
+          </li>
+          <li class="row">
+            <div>
+              <h3><a href="https://github.com/dasiethan/Financial-Risk-Projects/tree/main/06-alm-nelson-siegel"><span lang="en">Yield curve modelling and ALM</span><span lang="fr">Courbe des taux et gestion actif-passif</span></a></h3>
+              <p class="what"><span lang="en">Nelson-Siegel fits of the ECB euro area AAA curve every month since 2004, then an ALM stress test: durations, convexity and factor durations show what duration matching does and does not hedge.</span><span lang="fr">Ajustement Nelson-Siegel de la courbe AAA de la BCE chaque mois depuis 2004, puis un stress test ALM : durations, convexité et durations par facteur montrent ce que l'adossement en duration couvre, et ce qu'il ne couvre pas.</span></p>
+              <p class="stack">Python, NumPy, SciPy, ECB Data Portal</p>
+            </div>
+            <p class="figure"><strong><span lang="en">−4.8%</span><span lang="fr">−4,8&nbsp;%</span></strong><span class="cap"><span lang="en">surplus lost in a 100 bp rate fall with a duration gap</span><span lang="fr">de surplus perdu pour une baisse de 100 pb avec un écart de duration</span></span></p>
+          </li>
+          <li class="row">
+            <div>
+              <h3><a href="https://github.com/dasiethan/Financial-Risk-Projects/tree/main/05-audit-benford"><span lang="en">Audit analytics on public procurement</span><span lang="fr">Audit analytique des marchés publics</span></a></h3>
+              <p class="what"><span lang="en">Benford tests with Nigrini's MAD, threshold-bunching tests, nine rule-based audit controls and an Isolation Forest on 252,000 French public contracts notified in 2025.</span><span lang="fr">Tests de Benford avec la MAD de Nigrini, tests de tassement sous les seuils, neuf contrôles d'audit par règles et une Isolation Forest sur 252 000 marchés publics français notifiés en 2025.</span></p>
+              <p class="stack">Python, pandas, SciPy, scikit-learn</p>
+            </div>
+            <p class="figure"><strong>×1.8</strong><span class="cap"><span lang="en">more contracts just below the 90,000 € threshold than just above</span><span lang="fr">plus de marchés juste sous le seuil de 90 000 € que juste au-dessus</span></span></p>
+          </li>
+          <li class="row">
+            <div>
+              <h3><a href="https://github.com/dasiethan/Financial-Risk-Projects/tree/main/04-esg-fama-french"><span lang="en">ESG vs conventional funds: factor analysis</span><span lang="fr">Fonds ESG contre fonds classiques : analyse factorielle</span></a></h3>
+              <p class="what"><span lang="en">Four US ESG ETFs regressed against conventional twins with CAPM and Fama-French 5 factors plus momentum (Newey-West errors), with a statistical power check.</span><span lang="fr">Quatre ETF ESG américains régressés face à leur équivalent classique avec le CAPM et Fama-French 5 facteurs plus momentum (erreurs de Newey-West), avec un contrôle de la puissance statistique.</span></p>
+              <p class="stack">Python, statsmodels, Kenneth French Data Library</p>
+            </div>
+            <p class="figure"><strong><span lang="en">0 of 4</span><span lang="fr">0 sur 4</span></strong><span class="cap"><span lang="en">ESG funds with a significant alpha vs their twin; the gaps are style tilts</span><span lang="fr">fonds ESG avec un alpha significatif face à leur jumeau ; les écarts sont des biais de style</span></span></p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <h3><span lang="en">Data, statistics and econometrics</span><span lang="fr">Données, statistiques et économétrie</span></h3>
+        <ul>
+          <li class="row">
+            <div>
+              <h3><a href="https://github.com/dasiethan/University-s-Projects/tree/main/08-hungary-electricity-demand-time-series"><span lang="en">Hungarian electricity demand: time series</span><span lang="fr">Demande d'électricité en Hongrie : séries temporelles</span></a></h3>
+              <p class="what"><span lang="en">Unit root tests (DF, ADF, Zivot-Andrews, Lee-Strazicich) to detect structural breaks, then SARIMA modeling to forecast monthly demand.</span><span lang="fr">Tests de racine unitaire (DF, ADF, Zivot-Andrews, Lee-Strazicich) pour détecter les ruptures structurelles, puis modélisation SARIMA pour prévoir la demande mensuelle.</span></p>
+              <p class="stack">R, urca, forecast</p>
+            </div>
+            <p class="figure"><strong><span lang="en">4 tests</span><span lang="fr">4 tests</span></strong><span class="cap"><span lang="en">unit root tests before SARIMA modeling</span><span lang="fr">de racine unitaire avant la modélisation SARIMA</span></span></p>
+          </li>
+          <li class="row">
+            <div>
+              <h3><a href="https://github.com/dasiethan/University-s-Projects/tree/main/01-europe-cost-of-living-purchasing-power"><span lang="en">Cost of living and purchasing power in Europe</span><span lang="fr">Coût de la vie et pouvoir d'achat en Europe</span></a></h3>
+              <p class="what"><span lang="en">Merged four heterogeneous sources (Eurostat, OECD, World Bank, Numbeo) into a panel to analyze inflation, real wages and purchasing power, with interactive maps.</span><span lang="fr">Fusion de quatre sources hétérogènes (Eurostat, OCDE, Banque mondiale, Numbeo) en un panel pour analyser l'inflation, les salaires réels et le pouvoir d'achat, avec cartes interactives.</span></p>
+              <p class="stack">Python, pandas, GeoPandas, Folium</p>
+              <p class="tag"><span lang="en">Group project</span><span lang="fr">Projet de groupe</span></p>
+            </div>
+            <p class="figure"><strong><span lang="en">4 sources</span><span lang="fr">4 sources</span></strong><span class="cap"><span lang="en">merged into a 2010 to 2024 panel</span><span lang="fr">réunies dans un panel 2010 à 2024</span></span></p>
+          </li>
+          <li class="row compact">
+            <div>
+              <h3><a href="https://github.com/dasiethan/University-s-Projects/tree/main/05-air-quality-multivariate-statistics-pca"><span lang="en">Air quality and weather: multivariate statistics</span><span lang="fr">Qualité de l'air et météo : statistiques multivariées</span></a></h3>
+              <p class="what"><span lang="en">Correlation analysis and PCA on hourly pollution and weather data to identify the conditions driving ozone formation in Périgueux.</span><span lang="fr">Analyse des corrélations et ACP sur des données horaires de pollution et de météo pour identifier les conditions qui favorisent la formation d'ozone à Périgueux.</span></p>
+              <p class="stack">R, FactoMineR</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <h3>Machine learning</h3>
+        <ul>
+          <li class="row">
+            <div>
+              <h3><a href="https://github.com/dasiethan/University-s-Projects/tree/main/03-job-category-text-classification-nlp"><span lang="en">Job category text classification (NLP)</span><span lang="fr">Classification d'offres d'emploi par NLP</span></a></h3>
+              <p class="what"><span lang="en">Compared Naive Bayes, dense network, CNN and LSTM on 217,000 job descriptions across 28 categories.</span><span lang="fr">Comparaison de Naive Bayes, réseau dense, CNN et LSTM sur 217 000 descriptions de postes réparties en 28 catégories.</span></p>
+              <p class="stack">Python, Keras, Word2Vec, NLTK</p>
+            </div>
+            <p class="figure"><strong><span lang="en">82.4%</span><span lang="fr">82,4&nbsp;%</span></strong><span class="cap"><span lang="en">cross-validated accuracy (LSTM)</span><span lang="fr">de précision en validation croisée (LSTM)</span></span></p>
+          </li>
+          <li class="row">
+            <div>
+              <h3><a href="https://github.com/dasiethan/University-s-Projects/tree/main/02-wind-turbine-satellite-image-classification"><span lang="en">Wind turbine detection in satellite images</span><span lang="fr">Détection d'éoliennes sur images satellites</span></a></h3>
+              <p class="what"><span lang="en">Compared three CNNs (from scratch, MobileNetV2, EfficientNetB0) to detect the presence of a wind turbine. The best model relies on transfer learning.</span><span lang="fr">Comparaison de trois CNN (construit de zéro, MobileNetV2, EfficientNetB0) pour détecter la présence d'une éolienne. Le meilleur modèle s'appuie sur le transfer learning.</span></p>
+              <p class="stack">Python, TensorFlow, Keras</p>
+            </div>
+            <p class="figure"><strong><span lang="en">96.6%</span><span lang="fr">96,6&nbsp;%</span></strong><span class="cap"><span lang="en">validation accuracy</span><span lang="fr">de précision en validation</span></span></p>
+          </li>
+          <li class="row compact">
+            <div>
+              <h3><a href="https://github.com/dasiethan/University-s-Projects/tree/main/04-mnist-handwritten-digit-recognition"><span lang="en">Handwritten digit recognition (MNIST)</span><span lang="fr">Reconnaissance de chiffres manuscrits (MNIST)</span></a></h3>
+              <p class="what"><span lang="en">Clean, reusable CNN pipeline built around a DigitRecognizer class, reaching over 99% validation accuracy.</span><span lang="fr">Pipeline CNN propre et réutilisable, construit autour d'une classe DigitRecognizer, avec plus de 99&nbsp;% de précision en validation.</span></p>
+              <p class="stack">Python, TensorFlow, Keras</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <h3><span lang="en">Optimization and networks</span><span lang="fr">Optimisation et réseaux</span></h3>
+        <ul>
+          <li class="row">
+            <div>
+              <h3><a href="https://github.com/dasiethan/University-s-Projects/tree/main/07-traveling-salesman-optimization"><span lang="en">Traveling salesman: heuristics and exact ILP</span><span lang="fr">Voyageur de commerce : heuristiques et ILP exact</span></a></h3>
+              <p class="what"><span lang="en">Two heuristics, an MST-based lower bound and an exact ILP solver (Gurobi), benchmarked against each other.</span><span lang="fr">Deux heuristiques, une borne inférieure fondée sur l'arbre couvrant minimal et un solveur ILP exact (Gurobi), comparés entre eux.</span></p>
+              <p class="stack">C++, Gurobi, Python</p>
+            </div>
+            <p class="figure"><strong><span lang="en">38 instances</span><span lang="fr">38 instances</span></strong><span class="cap"><span lang="en">from TSPLIB used to compare methods</span><span lang="fr">TSPLIB utilisées pour comparer les méthodes</span></span></p>
+          </li>
+          <li class="row">
+            <div>
+              <h3><a href="https://github.com/dasiethan/University-s-Projects/tree/main/06-network-turing-test-congress-graph"><span lang="en">The Network Turing Test</span><span lang="fr">Le test de Turing des réseaux</span></a></h3>
+              <p class="what"><span lang="en">Can an LLM generate a social network structurally indistinguishable from a real one? Tested on the US Congress Twitter network.</span><span lang="fr">Un LLM peut-il générer un réseau social structurellement indiscernable d'un vrai ? Test sur le réseau Twitter du Congrès américain.</span></p>
+              <p class="stack">Python, NetworkX</p>
+              <p class="tag"><span lang="en">Group project</span><span lang="fr">Projet de groupe</span></p>
+            </div>
+            <p class="figure"><strong><span lang="en">7 metrics</span><span lang="fr">7 métriques</span></strong><span class="cap"><span lang="en">from graph theory used for comparison</span><span lang="fr">de théorie des graphes pour comparer</span></span></p>
+          </li>
+        </ul>
+      </div>
+
+      <p class="more">
+        <span lang="en">Code, results and run instructions are on GitHub: <a href="https://github.com/dasiethan/Financial-Risk-Projects">financial risk projects</a> and <a href="https://github.com/dasiethan/University-s-Projects">university projects</a>.</span>
+        <span lang="fr">Le code, les résultats et les instructions pour relancer chaque projet sont sur GitHub : <a href="https://github.com/dasiethan/Financial-Risk-Projects">projets de risques financiers</a> et <a href="https://github.com/dasiethan/University-s-Projects">projets universitaires</a>.</span>
+      </p>
+    </section>
+
+    <section id="formation">
+      <h2><span lang="en">Education</span><span lang="fr">Formation</span></h2>
+
+      <article class="entry">
+        <p class="when"><span lang="en">2025 to 2027</span><span lang="fr">2025 à 2027</span></p>
+        <h3><span lang="en">Master's in Financial and Economic Risk Engineering</span><span lang="fr">Master Ingénierie des Risques Économiques et Financiers</span></h3>
+        <p class="where"><span lang="en">Economic Risk and Data Science track, University of Bordeaux</span><span lang="fr">Parcours Economic Risk and Data Science, Université de Bordeaux</span></p>
+      </article>
+      <article class="entry">
+        <p class="when"><span lang="en">2024 to 2025</span><span lang="fr">2024 à 2025</span></p>
+        <h3><span lang="en">Bachelor's in Mathematics and Computer Science</span><span lang="fr">Licence Mathématiques-Informatique</span></h3>
+        <p class="where"><span lang="en">AI track, University of Bordeaux</span><span lang="fr">Parcours IA, Université de Bordeaux</span></p>
+      </article>
+      <article class="entry">
+        <p class="when"><span lang="en">2021 to 2024</span><span lang="fr">2021 à 2024</span></p>
+        <h3><span lang="en">Engineering Master's Program (CMI)</span><span lang="fr">Cursus Master en Ingénierie</span></h3>
+        <p class="where"><span lang="en">Mathematical optimization and algorithms for decision-making, University of Bordeaux</span><span lang="fr">Optimisation mathématique et algorithmes pour l'aide à la décision, Université de Bordeaux</span></p>
+      </article>
+    </section>
+
+    <section id="competences">
+      <h2><span lang="en">Skills</span><span lang="fr">Compétences</span></h2>
+      <dl class="skills">
+        <div>
+          <dt><span lang="en">Languages and tools</span><span lang="fr">Langages et outils</span></dt>
+          <dd><span lang="en">Python, R, SQL, VBA, Power BI, C++, advanced Excel, Git and GitHub, Jupyter</span><span lang="fr">Python, R, SQL, VBA, Power BI, C++, Excel avancé, Git et GitHub, Jupyter</span></dd>
+        </div>
+        <div>
+          <dt><span lang="en">Libraries</span><span lang="fr">Bibliothèques</span></dt>
+          <dd>pandas, NumPy, SciPy, statsmodels, scikit-learn, LightGBM, arch, TensorFlow, Keras, NetworkX, GeoPandas, Matplotlib, Seaborn, BeautifulSoup, Selenium</dd>
+        </div>
+        <div>
+          <dt><span lang="en">Risk methods</span><span lang="fr">Méthodes de risque</span></dt>
+          <dd><span lang="en">Credit scoring (WoE/IV, scorecards, PSI), VaR and Expected Shortfall, GARCH, backtesting (Kupiec, Christoffersen, Basel), GLM pricing (Poisson, Gamma), yield curves (Nelson-Siegel), durations and ALM stress tests, Benford's law and audit analytics</span><span lang="fr">Scoring crédit (WoE/IV, scorecards, PSI), VaR et Expected Shortfall, GARCH, backtesting (Kupiec, Christoffersen, Bâle), tarification par GLM (Poisson, Gamma), courbes des taux (Nelson-Siegel), durations et stress tests ALM, loi de Benford et audit analytique</span></dd>
+        </div>
+        <div>
+          <dt><span lang="en">Other methods</span><span lang="fr">Autres méthodes</span></dt>
+          <dd><span lang="en">Time series econometrics, regression and classification, PCA, ESG scoring, Fama-French models, Markov chains, data cleaning and cross-referencing</span><span lang="fr">Économétrie des séries temporelles, régression et classification, ACP, scoring ESG, modèles Fama-French, chaînes de Markov, nettoyage et croisement de données</span></dd>
+        </div>
+        <div>
+          <dt>Certifications</dt>
+          <dd><span lang="en">AMF certification, TOEIC 970 out of 990</span><span lang="fr">Certification AMF, TOEIC 970 sur 990</span></dd>
+        </div>
+        <div>
+          <dt><span lang="en">Languages</span><span lang="fr">Langues</span></dt>
+          <dd><span lang="en">French (native), English (C1), Spanish (B2), Hungarian (A2)</span><span lang="fr">Français (natif), anglais (C1), espagnol (B2), hongrois (A2)</span></dd>
+        </div>
+      </dl>
+    </section>
+
+    <p class="end">
+      <span lang="en">To discuss an internship starting March 2027, write to me at <a href="mailto:ethan.dasi.pro@gmail.com">ethan.dasi.pro@gmail.com</a>.</span>
+      <span lang="fr">Pour échanger sur un stage à partir de mars 2027, écrivez-moi à <a href="mailto:ethan.dasi.pro@gmail.com">ethan.dasi.pro@gmail.com</a>.</span>
+    </p>
+  </main>
+
+</div>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var buttons = document.querySelectorAll(".lang button");
+    var descriptionTag = document.querySelector('meta[name="description"]');
+    var meta = {
+      en: {
+        title: "Ethan Dasi, financial risk and data, Bordeaux",
+        description: "Master's student in Financial and Economic Risk Engineering in Bordeaux. Available from March 2027 for a 6-month internship in risk management or data analysis."
+      },
+      fr: {
+        title: "Ethan Dasi, risques financiers et data, Bordeaux",
+        description: "Étudiant en Master 2 Ingénierie des Risques Économiques et Financiers à Bordeaux. Disponible à partir de mars 2027 pour un stage de 6 mois en gestion des risques ou analyse de données."
+      }
+    };
+
+    function setLang(lang, remember) {
+      root.lang = lang;
+      document.title = meta[lang].title;
+      descriptionTag.setAttribute("content", meta[lang].description);
+      buttons.forEach(function (b) {
+        b.setAttribute("aria-pressed", b.getAttribute("data-set") === lang ? "true" : "false");
+      });
+      if (remember) {
+        try { localStorage.setItem("lang", lang); } catch (e) {}
+      }
+    }
+
+    buttons.forEach(function (b) {
+      b.addEventListener("click", function () { setLang(b.getAttribute("data-set"), true); });
+    });
+
+    setLang(root.lang === "fr" ? "fr" : "en", false);
+  })();
+</script>
+</body>
+</html>
